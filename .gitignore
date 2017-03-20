@@ -1,0 +1,14 @@
+.vs
+lib
+*.lock.json
+*.user
+*.min.css
+*.min.js
+bin
+obj
+/src/OSS/Storage
+node_modules
+/src/Developer/Storage
+Storage
+.vscode
+Properties

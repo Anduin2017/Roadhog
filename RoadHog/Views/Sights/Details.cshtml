@@ -1,0 +1,48 @@
+@model DSHomework.Models.Sight
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sight</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HasRestPlace)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HasRestPlace)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HasRestRoom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HasRestRoom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SightDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SightDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SightName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SightName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SightWelcomeRatio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SightWelcomeRatio)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SightId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

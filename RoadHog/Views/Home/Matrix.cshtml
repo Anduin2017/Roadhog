@@ -1,0 +1,18 @@
+﻿@model List<List<string>>
+@{
+    ViewData["Title"] = "Print Page";
+}
+<h2>Adjacency Matrix</h2>
+<table class="table table-bordered">
+    <tbody>
+        @foreach (var Line in Model)
+        {
+            <tr>
+                @foreach(var Row in Line)
+                {
+                    <td>@Row</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

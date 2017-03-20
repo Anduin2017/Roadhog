@@ -1,0 +1,31 @@
+﻿@model DSHomework.Models.Route
+@{
+    ViewData["Title"] = "Path";
+}
+<form class="form-horizontal" method="post">
+    <h4>Shortest Path</h4>
+    <hr />
+    <div class="form-group">
+        <label class="col-md-2 control-label">Choose start point</label>
+        <div class="col-md-10">
+            <select asp-for="StartSightId" class="form-control" asp-items="ViewBag.SightId"></select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">Choose end point</label>
+        <div class="col-md-10">
+            <select asp-for="EndSightId" class="form-control" asp-items="ViewBag.SightId"></select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Generate" class="btn btn-default" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <p>@ViewData["Result"]</p>
+        </div>
+    </div>
+</form>

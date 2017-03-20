@@ -1,0 +1,59 @@
+@model IEnumerable<DSHomework.Models.Sight>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Sights</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HasRestPlace)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasRestRoom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SightDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SightName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SightWelcomeRatio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasRestPlace)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasRestRoom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SightDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SightName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SightWelcomeRatio)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SightId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SightId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SightId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
